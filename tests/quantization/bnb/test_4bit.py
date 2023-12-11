@@ -521,8 +521,6 @@ class BaseSerializationTest(unittest.TestCase):
     model_name = "facebook/opt-125m"
     input_text = "Mars colonists' favorite meals are"
 
-    def setUp(self):
-        self.device = torch.device("cuda:0")
 
     def tearDown(self):
         gc.collect()
