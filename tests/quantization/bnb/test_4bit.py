@@ -543,7 +543,7 @@ class BaseSerializationTest(unittest.TestCase):
         model_0 = AutoModelForCausalLM.from_pretrained(
             self.model_name,
             quantization_config=self.quantization_config,
-            device_map=self.device,
+            device_map=torch_device,
         )
 
         with tempfile.TemporaryDirectory() as tmpdirname:
