@@ -38,6 +38,7 @@ from transformers.testing_utils import (
     require_torch_gpu,
     require_torch_multi_gpu,
     slow,
+    torch_device
 )
 
 
