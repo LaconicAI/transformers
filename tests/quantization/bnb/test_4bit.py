@@ -552,7 +552,7 @@ class BaseSerializationTest(unittest.TestCase):
             config = AutoConfig.from_pretrained(tmpdirname)
             self.assertTrue(hasattr(config, "quantization_config"))
 
-            model_1 = AutoModelForCausalLM.from_pretrained(tmpdirname, device_map=self.device)
+            model_1 = AutoModelForCausalLM.from_pretrained(tmpdirname, device_map=torch_device)
 
         # checking quantized linear module weight
         linear = get_some_linear_layer(model_1)
